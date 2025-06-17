@@ -19,7 +19,7 @@ function Header() {
           <h1 className="text-2xl font-bold">
             <Image
               src={"/logo2.png"}
-              alt="Zscrum Logo"
+              alt="TaskFlow Logo"
               width={200}
               height={56}
               className="h-10 w-auto object-contain"

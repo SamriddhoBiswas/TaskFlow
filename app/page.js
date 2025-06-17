@@ -83,7 +83,7 @@ export default function Home() {
             with
             <Image
               src={"/logo2.png"}
-              alt="Zscrum Logo"
+              alt="TaskFlow Logo"
               width={400}
               height={80}
               className="h-14 sm:h-24 w-auto object-contain"
