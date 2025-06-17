@@ -47,7 +47,7 @@ export async function createProject(data) {
 }
 
 export async function getProject(projectId, orgId) {
-  const { userId } = auth(); 
+  const { userId } = auth();
 
   if (!userId || !orgId) {
     throw new Error("Unauthorized");
@@ -84,14 +84,23 @@ export async function getProject(projectId, orgId) {
   return project;
 }
 
-export async function deleteProject(projectId, orgId)  {
-  const { userId, orgRole } = auth();
+export async function deleteProject(projectId, orgId) {
+  const { userId } = auth();
 
   if (!userId || !orgId) {
     throw new Error("Unauthorized");
   }
 
-  if (orgRole !== "org:admin") {
+  const { data: membershipList } =
+    await clerkClient.organizations.getOrganizationMembershipList({
+      organizationId: orgId,
+    });
+
+  // 3️⃣ find this user’s membership
+  const membership = membershipList.find(
+    (m) => m.publicUserData.userId === userId
+  );
+  if (!membership || membership.role !== "org:admin") {
     throw new Error("Only organization admins can delete projects");
   }
 
