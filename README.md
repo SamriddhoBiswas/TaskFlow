@@ -2,7 +2,7 @@
 # Full Stack Project Management App with Next JS, React, Tailwind CSS, Prisma, Neon, Clerk, Shadcn UI
 
 
-![image](public/taskflow_screen.png)
+![image](public/taskflow_screen_cut.png)
 
 ### Make sure to create a `.env` file with following variables -
 
