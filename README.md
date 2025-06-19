@@ -1,5 +1,5 @@
 # TaskFlow
-# Full Stack Project Management App with Next JS, React, Tailwind CSS, Prisma, Neon, Clerk, Shadcn UI 🔥🔥
+# Full Stack Project Management App with Next JS, React, Tailwind CSS, Prisma, Neon, Clerk, Shadcn UI
 
 
 ![image](public\taskflow_screen.png)
